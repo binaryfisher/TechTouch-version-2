@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorBottomMenu">#FFFFFF</color>
+    <color name="colorFragmentBackground">#edeff2</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorCubeRecording">#F90202</color>
+    <color name="colorCubePlaying">#FFFFFF</color>
+    <color name="bottomBarColor">#f7c90f</color>
+    <color name="buttonBorderColor">#f7c90f</color>
+    <color name="buttonColor">#07ed41</color>
+
+</resources>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/level11"
+    android:background="@color/colorFragmentBackground"
+    tools:context=".MainActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <GridLayout
+        android:id="@+id/imageContainer"
+        android:columnCount="4"
+        android:rowCount="2"
+        android:layout_above="@+id/buttomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/level11_00"
+                style="@style/cubeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/level11_00"
+                android:tag="1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/level11_01"
+                style="@style/cubeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/level11_01"
+                android:tag="2" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/level11_02"
+                style="@style/cubeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/level11_02"
+                android:tag="3" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/level11_03"
+                style="@style/cubeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/level11_03"
+                android:tag="4" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/level11_04"
+                style="@style/cubeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/level11_04"
+                android:tag="5" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/level11_05"
+                style="@style/cubeStyle"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/level11_05"
+                android:tag="6" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/level11_06"
+                style="@style/cubeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/level11_06"
+                android:tag="7" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_margin="8dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/level11_07"
+                style="@style/cubeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/level11_07"
+                android:tag="8" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+</FrameLayout>
