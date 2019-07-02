@@ -47,6 +47,7 @@ import butterknife.ButterKnife;
 import static com.amdi.techtouchv2.Common.Common.context;
 import static com.amdi.techtouchv2.Common.Common.currentCubeIsRecording;
 import static com.amdi.techtouchv2.Common.Common.isRecorderStarted;
+import static com.amdi.techtouchv2.Common.Common.isRecorderStopedOnPause;
 import static com.amdi.techtouchv2.Common.Common.isRecording;
 import static com.amdi.techtouchv2.Common.Common.isRestoring;
 import static com.amdi.techtouchv2.Common.Common.level;
@@ -138,19 +139,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        //if record doesn't stop
-        if(currentCubeIsRecording)
-            stopRecord();
-    }
-
-    @Override
+   @Override
     protected void onPause() {
         super.onPause();
-        stopRecord();
+        if(currentCubeIsRecording){
+            stopRecord();
+            isRecorderStopedOnPause = true;
+        }
+
     }
+
 
     public void levelUp(View view){
 

@@ -45,11 +45,12 @@ public class Common {
        public static SharedPreferences sharedPreferences;
        public static final int[] SELECT_IMAGE = {1000,2000,3000,4000,5000,6000,7000,8000};
        public static boolean isRecorderStarted = false;
+       public static boolean isRecorderStopedOnPause = false;
        public static Context context;
        public static final int MAX_RECORD_TIME = 10000;//max record time is 10s
        public static boolean isRecording = false; //record function enable or not
        public static boolean isRestoring = false;
-       public static boolean currentCubeIsRecording = false;//current cube is recording or notpublic static String recordingCubeTag;public static String nextTapeCubeTag;
+       public static boolean currentCubeIsRecording = false;//current cube is recording or not
        public static MediaRecorder mediaRecorder;
        public static MediaPlayer mediaPlayer;
        public static ImageView recordButton;
@@ -73,10 +74,16 @@ public class Common {
             startRecord(view);
 
 
+
         }else {
                 Drawable drawable = ContextCompat.getDrawable(context,R.drawable.playing_background);
                 view.setBackground(drawable);
-                stopRecord();
+
+                // If Recorder stoped in onPause stage, don't stop Recorder again
+                if(!isRecorderStopedOnPause) {
+                    stopRecord();
+                    isRecorderStopedOnPause = false;
+                }
                 recordButton.setEnabled(true);
         }
 
