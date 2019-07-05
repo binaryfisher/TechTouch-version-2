@@ -5,10 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.media.MediaPlayer;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -37,17 +34,6 @@ import static com.amdi.techtouchv2.Common.Common.context;
 import static com.amdi.techtouchv2.Common.Common.currentCubeIsRecording;
 import static com.amdi.techtouchv2.Common.Common.getPath;
 import static com.amdi.techtouchv2.Common.Common.imageTapped;
-import static com.amdi.techtouchv2.Common.Common.isRecording;
-import static com.amdi.techtouchv2.Common.Common.isRestoring;
-import static com.amdi.techtouchv2.Common.Common.mediaPlayer;
-
-import static com.amdi.techtouchv2.Common.Common.play;
-
-
-import static com.amdi.techtouchv2.Common.Common.sharedPreferences;
-import static com.amdi.techtouchv2.R.color.colorCubePlaying;
-import static com.amdi.techtouchv2.R.color.colorCubeRecording;
-import static com.amdi.techtouchv2.R.color.switch_thumb_disabled_material_dark;
 
 
 public class level00 extends Fragment  {
@@ -327,7 +313,7 @@ public class level00 extends Fragment  {
 
     }
 
-    public String[] getImagePath(String storeKey[]){
+    public String[] getImagePath(String[] storeKey){
         String[] path = new String[8];
         for(int i = 0; i < storeKey.length; i++){
             String selectedImage = sharedPreferences.getString(storeKey[i],"None");
@@ -337,7 +323,7 @@ public class level00 extends Fragment  {
         return path;
     }
 
-    public void loadImage(String imagePath[]){
+    public void loadImage(String[] imagePath){
         if(imagePath[0] != "None"){
             File image = new File(imagePath[0]);
             if(image.exists())

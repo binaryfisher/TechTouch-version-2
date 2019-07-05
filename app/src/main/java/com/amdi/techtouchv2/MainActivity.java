@@ -6,7 +6,6 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
@@ -16,12 +15,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import android.os.Environment;
-import android.util.Log;
+
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.amdi.techtouchv2.Fragments.level00;
 import com.amdi.techtouchv2.Fragments.level01;
@@ -64,16 +61,10 @@ import static com.amdi.techtouchv2.Common.Common.stopRecord;
 
 public class MainActivity extends AppCompatActivity {
 
-    final int REQUEST_PERMISSION_CODE = 1000;
+    private final int REQUEST_PERMISSION_CODE = 1000;
     private AlphaAnimation buttonClick;
 
-
-
-
-
     @BindView(R.id.restore) ImageView restoreButton;
-   // @BindView(R.id.record) ImageView recordButton;
-
 
      Fragment fragment0 = new level00();
      Fragment fragment1 = new level01();
@@ -101,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
         mediaRecorder = new MediaRecorder();
         mediaPlayer = new MediaPlayer();
+
         recordButton = findViewById(R.id.record);
 
         sharedPreferences = this.getSharedPreferences("com.amdi.techtouchv2",Context.MODE_PRIVATE);
@@ -126,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                 recordButton.setEnabled(false);
                 restoreButton.setImageResource(R.drawable.restoring);
                 Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/restore_sound_effect");
-               playSoundEffect(v,uri);
+                playSoundEffect(v,uri);
 
             }else{
                 recordButton.setEnabled(true);
@@ -191,21 +183,7 @@ public class MainActivity extends AppCompatActivity {
            }
 
     }
-
-    public void restoreButtonTapped(View view) {
-        view.startAnimation(buttonClick);
-
-        Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/restore_sound_effect" );
-        try {
-            mediaPlayer.setDataSource(getApplicationContext(),uri);
-            mediaPlayer.prepare();
-            mediaPlayer.start();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
+    
     private boolean checkPermission() {
         int write_external_storage_result = ContextCompat.
                 checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
