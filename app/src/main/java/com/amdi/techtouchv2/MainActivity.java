@@ -43,6 +43,7 @@ import butterknife.ButterKnife;
 
 import static com.amdi.techtouchv2.Common.Common.context;
 import static com.amdi.techtouchv2.Common.Common.currentCubeIsRecording;
+import static com.amdi.techtouchv2.Common.Common.isChangeImage;
 import static com.amdi.techtouchv2.Common.Common.isRecorderStarted;
 import static com.amdi.techtouchv2.Common.Common.isRecorderStopedOnPause;
 import static com.amdi.techtouchv2.Common.Common.isRecording;
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private AlphaAnimation buttonClick;
 
     @BindView(R.id.restore) ImageView restoreButton;
+    @BindView(R.id.change_image) ImageView changeImageButton;
 
      Fragment fragment0 = new level00();
      Fragment fragment1 = new level01();
@@ -116,17 +118,36 @@ public class MainActivity extends AppCompatActivity {
 
             if (isRestoring ){
                 recordButton.setEnabled(false);
+                changeImageButton.setEnabled(false);
                 restoreButton.setImageResource(R.drawable.restoring);
                 Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/restore_sound_effect");
                 playSoundEffect(v,uri);
 
             }else{
                 recordButton.setEnabled(true);
+                changeImageButton.setEnabled(true);
                 restoreButton.setImageResource(R.drawable.restore);
             }
 
 
         });
+
+       changeImageButton.setOnClickListener(v -> {
+           isChangeImage = !isChangeImage;
+
+           if(isChangeImage){
+               recordButton.setEnabled(false);
+               restoreButton.setEnabled(false);
+               changeImageButton.setImageResource(R.drawable.changeing_image);
+               Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/change_image_sound_effect");
+               playSoundEffect(v,uri);
+
+           }else {
+               recordButton.setEnabled(true);
+               restoreButton.setEnabled(true);
+               changeImageButton.setImageResource(R.drawable.change_image);
+           }
+       });
 
 
     }
@@ -173,12 +194,14 @@ public class MainActivity extends AppCompatActivity {
         isRecording = !isRecording;
            if(isRecording) {
                restoreButton.setEnabled(false);
+               changeImageButton.setEnabled(false);
                recordButton.setImageResource(R.drawable.recording);
                Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/record_sound_effect");
                playSoundEffect(view,uri);
            }else{
                stopPlay();
                restoreButton.setEnabled(true);
+               changeImageButton.setEnabled(true);
                recordButton.setImageResource(R.drawable.record);
            }
 

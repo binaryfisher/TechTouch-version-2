@@ -1,8 +1,6 @@
 package com.amdi.techtouchv2.Common;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -13,9 +11,8 @@ import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
-import android.widget.TextView;
+
 
 import androidx.core.content.ContextCompat;
 
@@ -50,6 +47,7 @@ public class Common {
        public static final int MAX_RECORD_TIME = 10000;//max record time is 10s
        public static boolean isRecording = false; //record function enable or not
        public static boolean isRestoring = false;
+       public static boolean isChangeImage = false;
        public static boolean currentCubeIsRecording = false;//current cube is recording or not
        public static MediaRecorder mediaRecorder;
        public static MediaPlayer mediaPlayer;

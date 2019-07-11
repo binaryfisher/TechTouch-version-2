@@ -34,6 +34,7 @@ import static com.amdi.techtouchv2.Common.Common.context;
 import static com.amdi.techtouchv2.Common.Common.currentCubeIsRecording;
 import static com.amdi.techtouchv2.Common.Common.getPath;
 import static com.amdi.techtouchv2.Common.Common.imageTapped;
+import static com.amdi.techtouchv2.Common.Common.isChangeImage;
 
 
 public class level00 extends Fragment  {
@@ -113,74 +114,86 @@ public class level00 extends Fragment  {
 
         imageView0.setOnLongClickListener(v -> {
 
-            Intent intent = new Intent();
-            intent.setType("image/*");
-           // intent.putExtra("imageName",imageName);
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent,"Select image"),SELECT_IMAGE[0]);
+            if(isChangeImage) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                // intent.putExtra("imageName",imageName);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select image"), SELECT_IMAGE[0]);
+            }
             return true;
         });
         imageView1.setOnLongClickListener(v -> {
 
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            // intent.putExtra("imageName",imageName);
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent,"Select image"),SELECT_IMAGE[1]);
+            if(isChangeImage) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                // intent.putExtra("imageName",imageName);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select image"), SELECT_IMAGE[1]);
+            }
             return true;
         });
         imageView2.setOnLongClickListener(v -> {
-
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            // intent.putExtra("imageName",imageName);
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent,"Select image"),SELECT_IMAGE[2]);
+            if(isChangeImage) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                // intent.putExtra("imageName",imageName);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select image"), SELECT_IMAGE[2]);
+            }
             return true;
         });
         imageView3.setOnLongClickListener(v -> {
-
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            // intent.putExtra("imageName",imageName);
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent,"Select image"),SELECT_IMAGE[3]);
+            if(isChangeImage) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                // intent.putExtra("imageName",imageName);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select image"), SELECT_IMAGE[3]);
+            }
             return true;
         });
         imageView4.setOnLongClickListener(v -> {
-
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            // intent.putExtra("imageName",imageName);
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent,"Select image"),SELECT_IMAGE[4]);
+            if(isChangeImage) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                // intent.putExtra("imageName",imageName);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select image"), SELECT_IMAGE[4]);
+            }
             return true;
         });
         imageView5.setOnLongClickListener(v -> {
-
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            // intent.putExtra("imageName",imageName);
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent,"Select image"),SELECT_IMAGE[5]);
+            if(isChangeImage) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                // intent.putExtra("imageName",imageName);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select image"), SELECT_IMAGE[5]);
+            }
             return true;
         });
         imageView6.setOnLongClickListener(v -> {
+            if(isChangeImage) {
 
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            // intent.putExtra("imageName",imageName);
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent,"Select image"),SELECT_IMAGE[6]);
-            return true;
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                // intent.putExtra("imageName",imageName);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select image"), SELECT_IMAGE[6]);
+            }
+                return true;
+
         });
         imageView7.setOnLongClickListener(v -> {
-
-            Intent intent = new Intent();
-            intent.setType("image/*");
-            // intent.putExtra("imageName",imageName);
-            intent.setAction(Intent.ACTION_GET_CONTENT);
-            startActivityForResult(Intent.createChooser(intent,"Select image"),SELECT_IMAGE[7]);
+            if(isChangeImage) {
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                // intent.putExtra("imageName",imageName);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent, "Select image"), SELECT_IMAGE[7]);
+            }
             return true;
         });
 
