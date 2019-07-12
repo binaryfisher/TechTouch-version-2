@@ -50,13 +50,12 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/record"
+                android:id="@+id/restore"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:padding="4dp"
                 android:background="@drawable/button_background"
-                android:onClick="recordButtonTapped"
-                android:src="@drawable/record" />
+                android:src="@drawable/restore" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,12 +65,13 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/restore"
+                android:id="@+id/record"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:padding="4dp"
                 android:background="@drawable/button_background"
-                android:src="@drawable/restore" />
+                android:onClick="recordButtonTapped"
+                android:src="@drawable/record" />
         </LinearLayout>
 
         <LinearLayout
