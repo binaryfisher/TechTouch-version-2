@@ -1,4 +1,4 @@
-package com.amdi.techtouchv2;
+package com.amdi.techtouch8;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

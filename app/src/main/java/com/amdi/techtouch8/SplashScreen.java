@@ -1,4 +1,4 @@
-package com.amdi.techtouchv2;
+package com.amdi.techtouch8;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.amdi.techtouchv2.Fragments;
+package com.amdi.techtouch8.Fragments;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 import androidx.core.content.ContextCompat;
 
-import com.amdi.techtouchv2.R;
+import com.amdi.techtouch8.R;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -22,34 +22,33 @@ import java.io.File;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.amdi.techtouchv2.Common.Common.SELECT_IMAGE;
-import static com.amdi.techtouchv2.Common.Common.context;
-import static com.amdi.techtouchv2.Common.Common.currentCubeIsRecording;
-import static com.amdi.techtouchv2.Common.Common.getPath;
-import static com.amdi.techtouchv2.Common.Common.imageTapped;
-import static com.amdi.techtouchv2.Common.Common.isChangeImage;
-import static com.amdi.techtouchv2.R.color.colorCubePlaying;
+import static com.amdi.techtouch8.Common.Common.SELECT_IMAGE;
+import static com.amdi.techtouch8.Common.Common.context;
+import static com.amdi.techtouch8.Common.Common.currentCubeIsRecording;
+import static com.amdi.techtouch8.Common.Common.getPath;
+import static com.amdi.techtouch8.Common.Common.imageTapped;
+import static com.amdi.techtouch8.Common.Common.isChangeImage;
 
 
-public class level02 extends Fragment {
+public class level09 extends Fragment {
 
-    @BindView(R.id.level02_00) ImageView imageView0;
-    @BindView(R.id.level02_01) ImageView imageView1;
-    @BindView(R.id.level02_02) ImageView imageView2;
-    @BindView(R.id.level02_03) ImageView imageView3;
-    @BindView(R.id.level02_04) ImageView imageView4;
-    @BindView(R.id.level02_05) ImageView imageView5;
-    @BindView(R.id.level02_06) ImageView imageView6;
-    @BindView(R.id.level02_07) ImageView imageView7;
+    @BindView(R.id.level09_00) ImageView imageView0;
+    @BindView(R.id.level09_01) ImageView imageView1;
+    @BindView(R.id.level09_02) ImageView imageView2;
+    @BindView(R.id.level09_03) ImageView imageView3;
+    @BindView(R.id.level09_04) ImageView imageView4;
+    @BindView(R.id.level09_05) ImageView imageView5;
+    @BindView(R.id.level09_06) ImageView imageView6;
+    @BindView(R.id.level09_07) ImageView imageView7;
 
     SharedPreferences sharedPreferences;
-    String[] image = {"image21","image22","image23","image24","image25","image26","image27","image28"};
+    String[] image = {"image91","image92","image93","image94","image95","image96","image97","image98"};
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_level02, container, false);
+        View view =  inflater.inflate(R.layout.fragment_level09, container, false);
         ButterKnife.bind(this,view);
 
         sharedPreferences = this.getActivity().getSharedPreferences("sharedPreferences", Context.MODE_PRIVATE);
@@ -184,6 +183,7 @@ public class level02 extends Fragment {
             }
             return true;
         });
+
 
         return view;
     }
@@ -363,6 +363,3 @@ public class level02 extends Fragment {
     }
 
 }
-
-
-

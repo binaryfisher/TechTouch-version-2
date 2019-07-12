@@ -10,7 +10,7 @@
 
     <fragment
         android:id="@+id/imageContainer"
-        android:name="com.amdi.techtouchv2.Fragments.level00"
+        android:name="com.amdi.techtouch8.Fragments.level00"
         android:layout_above="@id/buttomMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

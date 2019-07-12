@@ -1,4 +1,4 @@
-package com.amdi.techtouchv2.Fragments;
+package com.amdi.techtouch8.Fragments;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 import androidx.core.content.ContextCompat;
 
-import com.amdi.techtouchv2.R;
+import com.amdi.techtouch8.R;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -22,13 +22,12 @@ import java.io.File;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.amdi.techtouchv2.Common.Common.SELECT_IMAGE;
-import static com.amdi.techtouchv2.Common.Common.context;
-import static com.amdi.techtouchv2.Common.Common.currentCubeIsRecording;
-import static com.amdi.techtouchv2.Common.Common.getPath;
-import static com.amdi.techtouchv2.Common.Common.imageTapped;
-import static com.amdi.techtouchv2.Common.Common.isChangeImage;
-import static com.amdi.techtouchv2.R.color.colorCubePlaying;
+import static com.amdi.techtouch8.Common.Common.SELECT_IMAGE;
+import static com.amdi.techtouch8.Common.Common.context;
+import static com.amdi.techtouch8.Common.Common.currentCubeIsRecording;
+import static com.amdi.techtouch8.Common.Common.getPath;
+import static com.amdi.techtouch8.Common.Common.imageTapped;
+import static com.amdi.techtouch8.Common.Common.isChangeImage;
 
 
 public class level04 extends Fragment {

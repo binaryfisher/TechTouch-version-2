@@ -1,4 +1,4 @@
-package com.amdi.techtouchv2.Common;
+package com.amdi.techtouch8.Common;
 
 
 import android.content.Context;
@@ -16,26 +16,10 @@ import android.widget.ImageView;
 
 import androidx.core.content.ContextCompat;
 
-import com.amdi.techtouchv2.Fragments.level00;
-import com.amdi.techtouchv2.Fragments.level01;
-import com.amdi.techtouchv2.Fragments.level02;
-import com.amdi.techtouchv2.Fragments.level03;
-import com.amdi.techtouchv2.Fragments.level04;
-import com.amdi.techtouchv2.Fragments.level05;
-import com.amdi.techtouchv2.Fragments.level06;
-import com.amdi.techtouchv2.Fragments.level07;
-import com.amdi.techtouchv2.Fragments.level08;
-import com.amdi.techtouchv2.Fragments.level09;
-import com.amdi.techtouchv2.Fragments.level10;
-import com.amdi.techtouchv2.Fragments.level11;
-import com.amdi.techtouchv2.MainActivity;
-import com.amdi.techtouchv2.R;
+import com.amdi.techtouch8.R;
 
 import java.io.File;
 import java.io.IOException;
-
-import static com.amdi.techtouchv2.R.color.colorCubePlaying;
-import static com.amdi.techtouchv2.R.color.colorCubeRecording;
 
 public class Common {
         public static int level = 0;

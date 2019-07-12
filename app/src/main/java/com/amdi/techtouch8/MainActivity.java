@@ -1,4 +1,4 @@
-package com.amdi.techtouchv2;
+package com.amdi.techtouch8;
 
 
 import android.Manifest;
@@ -20,45 +20,38 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 
-import com.amdi.techtouchv2.Fragments.level00;
-import com.amdi.techtouchv2.Fragments.level01;
-import com.amdi.techtouchv2.Fragments.level02;
-import com.amdi.techtouchv2.Fragments.level03;
-import com.amdi.techtouchv2.Fragments.level04;
-import com.amdi.techtouchv2.Fragments.level05;
-import com.amdi.techtouchv2.Fragments.level06;
-import com.amdi.techtouchv2.Fragments.level07;
-import com.amdi.techtouchv2.Fragments.level08;
-import com.amdi.techtouchv2.Fragments.level09;
-import com.amdi.techtouchv2.Fragments.level10;
-import com.amdi.techtouchv2.Fragments.level11;
-import com.amdi.techtouchv2.Common.Common;
-
-import java.io.File;
-import java.io.IOException;
+import com.amdi.techtouch8.Fragments.level00;
+import com.amdi.techtouch8.Fragments.level01;
+import com.amdi.techtouch8.Fragments.level02;
+import com.amdi.techtouch8.Fragments.level03;
+import com.amdi.techtouch8.Fragments.level04;
+import com.amdi.techtouch8.Fragments.level05;
+import com.amdi.techtouch8.Fragments.level06;
+import com.amdi.techtouch8.Fragments.level07;
+import com.amdi.techtouch8.Fragments.level08;
+import com.amdi.techtouch8.Fragments.level09;
+import com.amdi.techtouch8.Fragments.level10;
+import com.amdi.techtouch8.Fragments.level11;
 
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.amdi.techtouchv2.Common.Common.context;
-import static com.amdi.techtouchv2.Common.Common.currentCubeIsRecording;
-import static com.amdi.techtouchv2.Common.Common.isChangeImage;
-import static com.amdi.techtouchv2.Common.Common.isRecorderStarted;
-import static com.amdi.techtouchv2.Common.Common.isRecorderStopedOnPause;
-import static com.amdi.techtouchv2.Common.Common.isRecording;
-import static com.amdi.techtouchv2.Common.Common.isRestoring;
-import static com.amdi.techtouchv2.Common.Common.level;
-import static com.amdi.techtouchv2.Common.Common.mediaPlayer;
-import static com.amdi.techtouchv2.Common.Common.mediaRecorder;
+import static com.amdi.techtouch8.Common.Common.context;
+import static com.amdi.techtouch8.Common.Common.currentCubeIsRecording;
+import static com.amdi.techtouch8.Common.Common.isChangeImage;
+import static com.amdi.techtouch8.Common.Common.isRecorderStopedOnPause;
+import static com.amdi.techtouch8.Common.Common.isRecording;
+import static com.amdi.techtouch8.Common.Common.isRestoring;
+import static com.amdi.techtouch8.Common.Common.level;
+import static com.amdi.techtouch8.Common.Common.mediaPlayer;
+import static com.amdi.techtouch8.Common.Common.mediaRecorder;
 
-import static com.amdi.techtouchv2.Common.Common.play;
-import static com.amdi.techtouchv2.Common.Common.playSoundEffect;
-import static com.amdi.techtouchv2.Common.Common.record;
-import static com.amdi.techtouchv2.Common.Common.recordButton;
-import static com.amdi.techtouchv2.Common.Common.sharedPreferences;
-import static com.amdi.techtouchv2.Common.Common.stopPlay;
-import static com.amdi.techtouchv2.Common.Common.stopRecord;
+import static com.amdi.techtouch8.Common.Common.playSoundEffect;
+import static com.amdi.techtouch8.Common.Common.recordButton;
+import static com.amdi.techtouch8.Common.Common.sharedPreferences;
+import static com.amdi.techtouch8.Common.Common.stopPlay;
+import static com.amdi.techtouch8.Common.Common.stopRecord;
 
 public class MainActivity extends AppCompatActivity {
 
