@@ -119,7 +119,7 @@ public class Common {
 
             int id = view.getId();
             String nameId = view.getResources().getResourceEntryName(id);
-            Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/" + nameId);
+            Uri uri = Uri.parse("android.resource://com.amdi.techtouch8/raw/" + nameId);
             //int resourceId = view.getResources().getIdentifier(nameId, "raw", "com.amdi.techtouchv2");
 
             try {
@@ -165,7 +165,7 @@ public class Common {
 
         if(isRecordBefore){
 
-            Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/restore_complete_sound_effect");
+            Uri uri = Uri.parse("android.resource://com.amdi.techtouch8/raw/restore_complete_sound_effect");
             deleteRecordedFile(view);
             playSoundEffect(view, uri);
         }

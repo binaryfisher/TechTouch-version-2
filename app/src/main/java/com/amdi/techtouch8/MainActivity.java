@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
         recordButton = findViewById(R.id.record);
 
-        sharedPreferences = this.getSharedPreferences("com.amdi.techtouchv2",Context.MODE_PRIVATE);
+        sharedPreferences = this.getSharedPreferences("com.amdi.techtouch8",Context.MODE_PRIVATE);
         level = sharedPreferences.getInt("level",0);
         changeLevel(level);
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 recordButton.setEnabled(false);
                 changeImageButton.setEnabled(false);
                 restoreButton.setImageResource(R.drawable.restoring);
-                Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/restore_sound_effect");
+                Uri uri = Uri.parse("android.resource://com.amdi.techtouch8/raw/restore_sound_effect");
                 playSoundEffect(v,uri);
 
             }else{
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                recordButton.setEnabled(false);
                restoreButton.setEnabled(false);
                changeImageButton.setImageResource(R.drawable.changeing_image);
-               Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/change_image_sound_effect");
+               Uri uri = Uri.parse("android.resource://com.amdi.techtouch8/raw/change_image_sound_effect");
                playSoundEffect(v,uri);
 
            }else {
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
                restoreButton.setEnabled(false);
                changeImageButton.setEnabled(false);
                recordButton.setImageResource(R.drawable.recording);
-               Uri uri = Uri.parse("android.resource://com.amdi.techtouchv2/raw/record_sound_effect");
+               Uri uri = Uri.parse("android.resource://com.amdi.techtouch8/raw/record_sound_effect");
                playSoundEffect(view,uri);
            }else{
                stopPlay();
