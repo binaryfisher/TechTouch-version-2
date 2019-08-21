@@ -10,5 +10,12 @@
     <color name="bottomBarColor">#f7c90f</color>
     <color name="buttonBorderColor">#f7c90f</color>
     <color name="buttonColor">#07ed41</color>
+    <color name="darkBlue">#0E4E96</color>
+    <color name="midBlue">#2484C6</color>
+    <color name="lightBlue">#87CDEC</color>
+    <color name="deepRed">#CF1F25</color>
+    <color name="orange">#F15A22</color>
+    <color name="green">#67AE3E</color>
+    <color name="yellow">#FFCB05</color>
 
 </resources>

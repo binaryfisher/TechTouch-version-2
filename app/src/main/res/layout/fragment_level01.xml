@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/level1"
-    android:background="@color/colorFragmentBackground"
+    android:background="@color/darkBlue"
     android:tag="1"
     tools:context=".MainActivity">
 

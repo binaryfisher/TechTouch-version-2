@@ -19,6 +19,7 @@ import androidx.core.content.ContextCompat;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.amdi.techtouch8.Fragments.level00;
 import com.amdi.techtouch8.Fragments.level01;
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.restore) ImageView restoreButton;
     @BindView(R.id.change_image) ImageView changeImageButton;
+    @BindView(R.id.indicator) TextView indicatorText;
+    @BindView(R.id.main_page) ImageView mainPageBtn;
 
      Fragment fragment0 = new level00();
      Fragment fragment1 = new level01();
@@ -93,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = this.getSharedPreferences("com.amdi.techtouch8",Context.MODE_PRIVATE);
         level = sharedPreferences.getInt("level",0);
         changeLevel(level);
+        upDateIndicatorText();
 
         buttonClick = new AlphaAnimation(1F,0.0F);
         mediaRecorder.setOnInfoListener((mr, what, extra) -> {
@@ -141,6 +145,9 @@ public class MainActivity extends AppCompatActivity {
                changeImageButton.setImageResource(R.drawable.change_image);
            }
        });
+       mainPageBtn.setOnClickListener(v -> {
+           goBackToMainPage();
+       });
 
 
     }
@@ -154,8 +161,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-
+    
     public void levelUp(View view){
 
 
@@ -167,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("level",level).apply();
         changeLevel(level);
         view.startAnimation(buttonClick);
+        upDateIndicatorText();
 
     }
 
@@ -179,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences.edit().putInt("level",level).apply();
         changeLevel(level);
         view.startAnimation(buttonClick);
+        upDateIndicatorText();
 
     }
 
@@ -269,6 +277,16 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.imageContainer,fragment);
         fragmentTransaction.commit();
 
+    }
+
+    public void goBackToMainPage(){
+        level = 0;
+        changeLevel(0);
+        upDateIndicatorText();
+    }
+
+    public void upDateIndicatorText(){
+        indicatorText.setText("Level " + (level + 1));
     }
 
 
