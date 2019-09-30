@@ -4,9 +4,7 @@
     package="com.amdi.techtouch8">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -20,10 +18,13 @@
         tools:replace="android:appComponentFactory">
         <activity
             android:screenOrientation="landscape"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
             android:name="com.amdi.techtouch8.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -32,6 +33,9 @@
             android:screenOrientation="landscape">
 
         </activity>
+
+
+
     </application>
 
 </manifest>

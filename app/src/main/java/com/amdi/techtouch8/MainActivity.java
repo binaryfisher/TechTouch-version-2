@@ -35,6 +35,8 @@ import com.amdi.techtouch8.Fragments.level10;
 import com.amdi.techtouch8.Fragments.level11;
 
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -77,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
      Fragment fragment10 = new level10();
      Fragment fragment11 = new level11();
 
+     private ArrayList<Fragment> fragments = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,11 +93,25 @@ public class MainActivity extends AppCompatActivity {
             requestPermission();
         }
 
+        fragments.add(fragment0);
+        fragments.add(fragment1);
+        fragments.add(fragment2);
+        fragments.add(fragment3);
+        fragments.add(fragment4);
+        fragments.add(fragment5);
+        fragments.add(fragment6);
+        fragments.add(fragment7);
+        fragments.add(fragment8);
+        fragments.add(fragment9);
+        fragments.add(fragment10);
+        fragments.add(fragment11);
+
         mediaRecorder = new MediaRecorder();
         mediaPlayer = new MediaPlayer();
 
         recordButton = findViewById(R.id.record);
 
+        //get and set level last visited
         sharedPreferences = this.getSharedPreferences("com.amdi.techtouch8",Context.MODE_PRIVATE);
         level = sharedPreferences.getInt("level",0);
         changeLevel(level);
@@ -107,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
 
        restoreButton.setOnClickListener(v -> {
 
@@ -145,13 +163,16 @@ public class MainActivity extends AppCompatActivity {
                changeImageButton.setImageResource(R.drawable.change_image);
            }
        });
+
        mainPageBtn.setOnClickListener(v -> {
+           v.startAnimation(buttonClick);
            goBackToMainPage();
        });
 
 
     }
 
+    //close recorder when turn back to main screen
    @Override
     protected void onPause() {
         super.onPause();
@@ -161,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    
+
     public void levelUp(View view){
 
 
@@ -230,44 +251,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public  void changeLevel(int level){
-        switch (level){
-            case 0:
-               switchFragment(fragment0);
-                break;
-            case 1:
-                switchFragment(fragment1);
-                break;
-            case 2:
-                switchFragment(fragment2);
-                break;
-            case 3:
-                switchFragment(fragment3);
-                break;
-            case 4:
-                switchFragment(fragment4);
-                break;
-            case 5:
-                switchFragment(fragment5);
-                break;
-            case 6:
-                switchFragment(fragment6);
-                break;
-            case 7:
-                switchFragment(fragment7);
-                break;
-            case 8:
-                switchFragment(fragment8);
-                break;
-            case 9:
-                switchFragment(fragment9);
-                break;
-            case 10:
-                switchFragment(fragment10);
-                break;
-            case 11:
-                switchFragment(fragment11);
-                break;
-        }
+
+        switchFragment(fragments.get(level));
 
     }
 
@@ -282,6 +267,7 @@ public class MainActivity extends AppCompatActivity {
     public void goBackToMainPage(){
         level = 0;
         changeLevel(0);
+
         upDateIndicatorText();
     }
 
