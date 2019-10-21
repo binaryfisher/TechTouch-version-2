@@ -3,6 +3,7 @@ package com.amdi.techtouch8.Common;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
@@ -10,6 +11,7 @@ import android.media.MediaRecorder;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -18,8 +20,15 @@ import androidx.core.content.ContextCompat;
 
 import com.amdi.techtouch8.R;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 public class Common {
         public static int level = 0;
@@ -206,6 +215,74 @@ public class Common {
             result = "Not found";
         }
         return result;
+    }
+
+    public static void importImageLib(Context context) {
+
+        AssetManager assetManager = context.getAssets();
+
+        String basePath = Environment.getExternalStorageDirectory() + "/images";
+        BufferedInputStream bis = null;
+        BufferedOutputStream bos = null;
+        InputStream is;
+        File images = new File(basePath);
+        //if no images library injected, do the injection of the image library
+        if (!images.exists()) {
+
+            try {
+                String[] folderList = assetManager.list("images-library");
+                for (int i = 0; i < folderList.length; i++) {
+                    //create subFolder of images library
+                    String subFolderPath = basePath + "/" + folderList[i];
+                    File subFolder = new File(subFolderPath);
+                    if (!subFolder.exists()) {
+                        subFolder.mkdirs();
+                    }
+                    //get images from subfolder
+                    String[] imagesList = assetManager.list("images-library/" + folderList[i]);
+
+                    for (int j = 0; j < imagesList.length; j++) {
+                        //open images as inputStream
+                        is = assetManager.open("images-library/" + folderList[i] + "/" + imagesList[j]);
+                        bis = new BufferedInputStream(is);
+                        bos = new BufferedOutputStream(new FileOutputStream(subFolderPath + "/" + imagesList[j]));
+                        int len;
+                        byte[] bytes = new byte[1024];
+                        while ((len = bis.read(bytes)) != -1) {
+                            bos.write(bytes, 0, len);
+                        }
+                        if(bis != null) {
+                            bis.close();
+                        }
+                        if(bos != null) {
+                            bos.close();
+                        }
+                        if(is != null) {
+                            is.close();
+                        }
+                    }
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (bis != null) {
+                    try {
+                        bis.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (bos != null) {
+                    try {
+                        bos.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+        }
     }
 
 

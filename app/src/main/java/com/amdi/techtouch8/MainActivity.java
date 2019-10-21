@@ -42,6 +42,7 @@ import butterknife.ButterKnife;
 
 import static com.amdi.techtouch8.Common.Common.context;
 import static com.amdi.techtouch8.Common.Common.currentCubeIsRecording;
+import static com.amdi.techtouch8.Common.Common.importImageLib;
 import static com.amdi.techtouch8.Common.Common.isChangeImage;
 import static com.amdi.techtouch8.Common.Common.isRecorderStopedOnPause;
 import static com.amdi.techtouch8.Common.Common.isRecording;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
         ButterKnife.bind(this);
